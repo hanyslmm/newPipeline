@@ -7,12 +7,13 @@ pipeline {
                  sh '''
                      echo "Multiline shell steps works too"
                      ls -lah
+                     pwd
                  '''
              }
          }
          stage('Lint HTML') {
               steps {
-                  sh 'tidy -q -e index.html'
+                  sh 'tidy -q -e ./index.html'
               }
          }
          stage('Security Scan') {
