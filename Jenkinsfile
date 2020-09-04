@@ -3,7 +3,7 @@ pipeline {
      stages {
          stage('Build') {
              steps {
-                 git pull
+                 
                  sh 'echo "Hello World"'
                  sh '''
                      echo "Multiline shell steps works too"
